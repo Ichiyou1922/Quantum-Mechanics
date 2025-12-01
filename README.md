@@ -22,5 +22,21 @@
 - 二階微分を差分近似すると？
 
 ```math
-\frac{d^2 \psi}{dx^2} \approx \frac{\psi_{i+1}-2\psi_{i}+\psi_{i-}}{(\Delta x)^2}
+\frac{d^2 \psi}{dx^2} \approx \frac{\psi_{i+1}-2\psi_{i}+\psi_{i-1}}{(\Delta x)^2}
 ```
+- これを方程式に代入して，定数項 $\frac{\hbar^2}{2m}$ を省略して整理すると漸化式になる．
+
+```math
+-\frac{\psi_{i-1}}{(\Delta x)^2}+(\frac{2}{(\Delta x)^2}+V_{i})\psi_{i}-frac{\psi{i-1}}{(\Delta x)^2}=E\psi_{i}
+```
+- 行列形式に直せば
+```math
+\begin{pmatrix} \ddots & \ddots & 0 \\ -1 & 2+v_{i}(\Delta x)^2 & -1 \\ 0 & \ddots & \ddots \end{pmatrix} \begin{pmatrix} \vdots \\ \psi_{i} \\ \vdots \end{pmatrix} = E(\Delta x)^2 \begin{pmatrix} \vdots \\ \psi_{i} \\ \vdots \end{pmatrix}
+```
+
+- ベクトル $\psi$ に対して行列 $H$ がかかっている．
+- 上の**三重対角行列**をプログラムに実装したい．
+
+
+
+
