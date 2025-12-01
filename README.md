@@ -56,7 +56,7 @@
 ```math
 \mathbf{A}\vec{x}=\lambda \vec{x}
 ```
-- このとき $\vec{x}$ を$\mathbf{A}$ の固有ベクトル(eigenvector)，$\lambda$ を固有値(eigenvalue)という．
+- このとき $\vec{x}$ を $\mathbf{A}$ の固有ベクトル(eigenvector)， $\lambda$ を固有値(eigenvalue)という．
   - $\mathbf{A}$ は正方行列．固有ベクトルは $\vec{0}$ でない． $\lambda$ はスカラ．
 
 - 固有値すべてを集めた集合を**固有空間**という．
@@ -72,7 +72,11 @@ det\mathbf{A} = \sum_{\sigma \in S_{n}}sgn(\sigma)\prod_{i=1}^{n}a_{i\sigma (i)}
 \end{equation}
 ```
 - $3\times 3$ のときで確認してみる．
-1. $\mathbf{A}=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}$ とする．
+1. $\mathbf{A}$ を
+```math
+\mathbf{A}=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}$
+```
+とする，
 2. $\sigma_{1}=
 \begin{bmatrix}
 1 & 2 & 3 \\
