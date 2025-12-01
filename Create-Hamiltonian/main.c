@@ -85,30 +85,21 @@ ComplexMatrix *create_H(int size, ComplexVector *V, double con, double Delta_x) 
   
   ComplexMatrix *new_H = create_matrix(size, size);
   //対角成分をセット
-  for(int i = 0; i < size; i++) {
-    //対角成分の値を取得
-    ComplexVector *dia_elem = create_vector(size);
-    set_vector_element(dia_elem, i, con * (2 + V->data[i] * pow(Delta_x, 2)));  
-    //対角成分の値を代入
-    for (int j = 0; j < size; j++) {
-      if(i == j) {
-        if(i == 0 && j == 0) {
-          set_matrix_element(new_H, i, j, dia_elem->data[i]);
-          set_matrix_element(new_H, i, j+1, -con);
-        }
-        else if(i == size - 1 && j == size - 1){
-          set_matrix_element(new_H, i, j, dia_elem->data[i]);
-          set_matrix_element(new_H, i, j-1, -con);
-        }
-        else {
-          set_matrix_element(new_H, i, j, dia_elem->data[i]);
-          set_matrix_element(new_H, i, j+1, -con);
-          set_matrix_element(new_H, i, j-1, -con);
-        }
-      }
+  //対角成分へのアクセスはi行i列目で考えれば良い．
+  for (int i = 0; i < size; i++) {
+    double v_val = V->data[i];
+    double diag_val = con * (2.0 + v_val * delta_x * delta_x);
+    double off_diag = -con;
+
+    set_matrix_element(new_H, i, i, diag_val);
+
+    if (i > 0) {
+      set_matrix_element(new_H, i, i-1, off_diag);
+    }
+    if (i < size - 1) {
+      set_matrix_element(new_H, i, i+1, off_diag);
     }
   }
-
   return new_H;
 }
 
