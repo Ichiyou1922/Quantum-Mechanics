@@ -95,15 +95,15 @@ det\mathbf{A}=\sum_{\sigma \in S_{3}}sgn(\sigma)\prod_{i=1}^{3}a_{i\sigma (i)} \
 \begin{bmatrix}
 1 & 2 & 3 \\
 1(ここが\sigma_{1}(1)) & 2(\sigma_{1}(2)) & 3(\sigma_{1}(3))
-\end{bmatrix} \\
+\end{bmatrix} 
 ```
-- よって，1項目は $a_{11}a{22}a{33}$ 偶置換であることに注意
+- よって，1項目は $a_{11}a_{22}a_{33}$  .偶置換であることに注意
 - 一度置換して
 ```math
 \sigma_{2}=
 \begin{bmatrix} 1&2&3 \\ 2&1&3 \end{bmatrix}
 ```
-- 2項目は $-a_{12}a_{21}a_{33}$ 奇置換であることに注意．
+- 2項目は $-a_{12}a_{21}a_{33}$ .奇置換であることに注意．
 - 同じように繰り返していく
 ```math
 \sigma_{3}=
