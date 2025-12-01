@@ -74,14 +74,28 @@ det\mathbf{A} = \sum_{\sigma \in S_{n}}sgn(\sigma)\prod_{i=1}^{n}a_{i\sigma (i)}
 - $3\times 3$ のときで確認してみる．
 1. $\mathbf{A}$ を
 ```math
-\mathbf{A}=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}$
+\mathbf{A}=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}
 ```
-とする，
-2. $\sigma_{1}=
+とする.
+
+2. $det\mathbf{A}$ は以下で表される．
+```math
+\begin{array}
+det\mathbf{A}=\sum_{\sigma \in S_{3}}sgn(\sigma)\prod_{i=1}^{3}a_{i\sigma (i)} \\
+=sgn(\sigma_{1})a_{1\sigma_{1}(1)}a_{2\sigma_{1}(2)}a_{3\sigma_{1}(3)} \\
++sgn(\sigma_{2})a_{1\sigma_{2}(1)}a_{2\sigma_{2}(2)}a_{3\sigma_{2}(3)} \\
+\vdot \\
++sgn(\sigma_{6})a_{1\sigma_{6}(1)}a_{2\sigma_{6}(2)}a_{3\sigma_{6}\end{array}
+```
+
+3. 
+```math
+\sigma_{1}=
 \begin{bmatrix}
 1 & 2 & 3 \\
 1(ここが\sigma_{1}(1)) & 2(\sigma_{1}(2)) & 3(\sigma_{1}(3))
-\end{bmatrix}$
+\end{bmatrix}
+```
 #### べき乗法(Power Iteration)
 - n次正方行列の最大固有値と最大固有値に対応する固有ベクトルを計算する．
 
