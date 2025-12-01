@@ -153,5 +153,7 @@ int main(void) {
       }
     }
   }
+  free_vector(V);
+  free_Matris(H);
   return 0;
 }  
