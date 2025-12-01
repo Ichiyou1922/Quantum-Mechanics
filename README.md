@@ -80,12 +80,13 @@ det\mathbf{A} = \sum_{\sigma \in S_{n}}sgn(\sigma)\prod_{i=1}^{n}a_{i\sigma (i)}
 
 2. $det\mathbf{A}$ は以下で表される．
 ```math
-\begin{array}
+\begin{matrix}
 det\mathbf{A}=\sum_{\sigma \in S_{3}}sgn(\sigma)\prod_{i=1}^{3}a_{i\sigma (i)} \\
 =sgn(\sigma_{1})a_{1\sigma_{1}(1)}a_{2\sigma_{1}(2)}a_{3\sigma_{1}(3)} \\
 +sgn(\sigma_{2})a_{1\sigma_{2}(1)}a_{2\sigma_{2}(2)}a_{3\sigma_{2}(3)} \\
 \vdot \\
-+sgn(\sigma_{6})a_{1\sigma_{6}(1)}a_{2\sigma_{6}(2)}a_{3\sigma_{6}\end{array}
++sgn(\sigma_{6})a_{1\sigma_{6}(1)}a_{2\sigma_{6}(2)}a_{3\sigma_{6}(3)}
+\end{matrix}
 ```
 
 3. 
