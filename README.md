@@ -78,25 +78,47 @@ det\mathbf{A} = \sum_{\sigma \in S_{n}}sgn(\sigma)\prod_{i=1}^{n}a_{i\sigma (i)}
 ```
 とする.
 
-2. $det\mathbf{A}$ は以下で表される．
+2. $det\mathbf{A}$ は以下で表される．ただし，組み合わせは $3!=6$ 通りあるので, $\sigma_{n}$ は６つ．
 ```math
 \begin{matrix}
 det\mathbf{A}=\sum_{\sigma \in S_{3}}sgn(\sigma)\prod_{i=1}^{3}a_{i\sigma (i)} \\
 =sgn(\sigma_{1})a_{1\sigma_{1}(1)}a_{2\sigma_{1}(2)}a_{3\sigma_{1}(3)} \\
 +sgn(\sigma_{2})a_{1\sigma_{2}(1)}a_{2\sigma_{2}(2)}a_{3\sigma_{2}(3)} \\
-\vdot \\
+\vdots \\
 +sgn(\sigma_{6})a_{1\sigma_{6}(1)}a_{2\sigma_{6}(2)}a_{3\sigma_{6}(3)}
 \end{matrix}
 ```
 
-3. 
+3. sgn記号は置換の回数で符号を決める．奇置換->-1, 偶置換->1
 ```math
 \sigma_{1}=
 \begin{bmatrix}
 1 & 2 & 3 \\
 1(ここが\sigma_{1}(1)) & 2(\sigma_{1}(2)) & 3(\sigma_{1}(3))
-\end{bmatrix}
+\end{bmatrix} \\
 ```
+- よって，1項目は $a_{11}a{22}a{33}$ 偶置換であることに注意
+- 一度置換して
+```math
+\begin{bmatrix} 1&2&3 \\ 2&1&3 \end{bmatrix}
+```
+- 2項目は $-a_{12}a_{21}a_{33}$ 奇置換であることに注意．
+- 同じように繰り返していく
+```math
+\begin{bmatrix} 1&2&3 \\ 3&1&2 \end{bmatrix}
+```
+```math
+\begin{bmatrix} 1&2&3 \\ 3&2&1 \end{bmatrix}
+```
+```math
+\begin{bmatrix} 1&2&3 \\ 2&3&1 \end{bmatrix}
+```
+```math
+\begin{bmatrix} 1&2&3 \\ 1&3&2 \end{bmatrix}
+```
+- 結果はサラスの公式を使ったときと同じものになる．
+
+det\mathbf{A}=a_{11}
 #### べき乗法(Power Iteration)
 - n次正方行列の最大固有値と最大固有値に対応する固有ベクトルを計算する．
 
