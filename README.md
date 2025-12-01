@@ -51,7 +51,33 @@
 - ディリクレ境界条件はこの未知数を前もって定めておくためのもの．
   - これによって，計算は範囲内のものだけで良い，ということになる．
 ### 行列の固有値を求めるアルゴリズム
+#### 固有値の復習
+- 定義:
+```math
+\mathbf{A}\vec{x}=\lambda \vec{x}
+```
+- このとき $\vec{x}$ を$\mathbf{A}$ の固有ベクトル(eigenvector)，$\lambda$ を固有値(eigenvalue)という．
+  - $\mathbf{A}$ は正方行列．固有ベクトルは $\vec{0}$ でない． $\lambda$ はスカラ．
 
+- 固有値すべてを集めた集合を**固有空間**という．
+- 固有値の求め方
+  - $det(\mathbf{A}-\lambda I)=0)$ を解けばいい．
+  - 何故か？
+    - とりあえず行列式とはなにかから考えてみよう．
+
+- 行列式の定義: $\mathbf{A}$ が $N\times N$ 行列のとき
+```math
+\begin{equation}
+det\mathbf{A} = \sum_{\sigma \in S_{n}}sgn(\sigma)\prod_{i=1}^{n}a_{i\sigma (i)}
+\end{equation}
+```
+- $3\times 3$ のときで確認してみる．
+1. $\mathbf{A}=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}$ とする．
+2. $\sigma_{1}=
+\begin{bmatrix}
+1 & 2 & 3 \\
+1(ここが\sigma_{1}(1)) & 2(\sigma_{1}(2)) & 3(\sigma_{1}(3))
+\end{bmatrix}$
 #### べき乗法(Power Iteration)
 - n次正方行列の最大固有値と最大固有値に対応する固有ベクトルを計算する．
 
