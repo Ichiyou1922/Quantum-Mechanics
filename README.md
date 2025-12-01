@@ -38,7 +38,7 @@
 - 上の**三重対角行列**をプログラムに実装したい->Create-Hamiltonian
 - 条件
   - $\psi (x)->0\le x\le N$
-  - $V(x)->xの範囲内で0, それ以外で\infity$
+  - $V(x)->xの範囲内で0, それ以外で\infty$
   - ディリクレ境界条件-> $\psi (0)=0$ , $\psi (N)=0$
 
 - ディリクレ境界条件はなぜ必要？
@@ -74,7 +74,7 @@ det\mathbf{A} = \sum_{\sigma \in S_{n}}sgn(\sigma)\prod_{i=1}^{n}a_{i\sigma (i)}
 - $3\times 3$ のときで確認してみる．
 1. $\mathbf{A}$ を
 ```math
-\mathbf{A}=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}
+\mathbf{A}=\begin{pmatrix} a_{11} & a_{12} & a_{13}\\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a{33} \end{pmatrix}
 ```
 とする.
 
@@ -130,7 +130,7 @@ det\mathbf{A}=\sum_{\sigma \in S_{3}}sgn(\sigma)\prod_{i=1}^{3}a_{i\sigma (i)} \
 ```
 には以下のことが成り立つ．
 1. 各列ベクトルが線形独立である場合 $det\mathbf{A}\neq 1$ である．
-2. 各列ベクトルが線形従属である場合 $det\mathbf{A}=0$ である．
+2. 各列ベクトルが線形従属である場合 $det\mathbf{A}=0$ である．->これが答えになる．
 - 線形独立とは
     - ベクトル $\mathbf{x_{n}}$ に対して， 
 ```math
@@ -144,6 +144,8 @@ c_{1}\mathbf{x_{1}}+...+c_{n}\mathbf{x_{n}} = 0
 d_{1}\mathbf{x{1}}+...+d_{n}\mathbf{x_{n}}=0
 ```
 を満たす係数 $d_{i}$ に0で無いものが存在するならば，ベクトル $x_{n}$ を線形従属という．
+
+- $(A-\lambda I)\mathbf{x}=0$ に置いて $\mathbf{x}\neq 0$ ならば， $(A-\lambda I)=0$ となるしかなく，このときその列ベクトルたちは線形従属(一次従属)となる．
 
 #### べき乗法(Power Iteration)
 - n次正方行列の最大固有値と最大固有値に対応する固有ベクトルを計算する．
