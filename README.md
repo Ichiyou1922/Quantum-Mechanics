@@ -100,20 +100,25 @@ det\mathbf{A}=\sum_{\sigma \in S_{3}}sgn(\sigma)\prod_{i=1}^{3}a_{i\sigma (i)} \
 - よって，1項目は $a_{11}a{22}a{33}$ 偶置換であることに注意
 - 一度置換して
 ```math
+\sigma_{2}=
 \begin{bmatrix} 1&2&3 \\ 2&1&3 \end{bmatrix}
 ```
 - 2項目は $-a_{12}a_{21}a_{33}$ 奇置換であることに注意．
 - 同じように繰り返していく
 ```math
+\sigma_{3}=
 \begin{bmatrix} 1&2&3 \\ 3&1&2 \end{bmatrix}
 ```
 ```math
+\sigma_{4}=
 \begin{bmatrix} 1&2&3 \\ 3&2&1 \end{bmatrix}
 ```
 ```math
+\sigma_{5}=
 \begin{bmatrix} 1&2&3 \\ 2&3&1 \end{bmatrix}
 ```
 ```math
+\sigma_{6}=
 \begin{bmatrix} 1&2&3 \\ 1&3&2 \end{bmatrix}
 ```
 - 結果はサラスの公式を使ったときと同じものになる．
