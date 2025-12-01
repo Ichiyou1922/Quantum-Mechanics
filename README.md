@@ -126,23 +126,25 @@ det\mathbf{A}=\sum_{\sigma \in S_{3}}sgn(\sigma)\prod_{i=1}^{3}a_{i\sigma (i)} \
 - 重要な性質
     - $N\times N$ 行列Aをn個の列ベクトルで表現した
 ```math
-\mathbf{A}=\begin{pmatrix} a_{1} & a_{2} & ... & a_{n}
+\mathbf{A}=\begin{pmatrix} a_{1} & a_{2} & ... & a_{n} \end{pmatrix}
 ```
 には以下のことが成り立つ．
 1. 各列ベクトルが線形独立である場合 $det\mathbf{A}\neq 1$ である．
 2. 各列ベクトルが線形従属である場合 $det\mathbf{A}=0$ である．
-3. 線形独立とは
+- 線形独立とは
     - ベクトル $\mathbf{x_{n}}$ に対して， 
 ```math
 c_{1}\mathbf{x_{1}}+...+c_{n}\mathbf{x_{n}} = 0
 ```
-を満たす係数 $c_{i}$ がすべて0であるとき，ベクトル $x_{n}$ を線形独立という．
-4. 線形従属とは
+を満たす係数 $c_{i}$ がすべて0であるとき，ベクトル $x_{n}$ を線形独立という．<br>
+
+- 線形従属とは
     - ベクトル $\mathbf{x_{n}}$ に対して， 
 ```math
 d_{1}\mathbf{x{1}}+...+d_{n}\mathbf{x_{n}}=0
 ```
 を満たす係数 $d_{i}$ に0で無いものが存在するならば，ベクトル $x_{n}$ を線形従属という．
+
 #### べき乗法(Power Iteration)
 - n次正方行列の最大固有値と最大固有値に対応する固有ベクトルを計算する．
 
