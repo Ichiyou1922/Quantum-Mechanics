@@ -31,6 +31,7 @@ ComplexMatrix *create_matrix(int rows, int cols) {
     free(new_matrix);
     exit(1);
   }
+
   return new_matrix;
 }
 
@@ -154,6 +155,6 @@ int main(void) {
     }
   }
   free_vector(V);
-  free_Matris(H);
+  free_Matrix(H);
   return 0;
 }  
