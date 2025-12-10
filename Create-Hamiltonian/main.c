@@ -89,7 +89,7 @@ ComplexMatrix *create_H(int size, ComplexVector *V, double con, double Delta_x) 
   //対角成分へのアクセスはi行i列目で考えれば良い．
   for (int i = 0; i < size; i++) {
     double v_val = V->data[i];
-    double diag_val = con * (2.0 + v_val * delta_x * delta_x);
+    double diag_val = con * (2.0 + v_val * Delta_x * Delta_x);
     double off_diag = -con;
 
     set_matrix_element(new_H, i, i, diag_val);
